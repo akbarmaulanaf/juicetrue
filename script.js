@@ -89,4 +89,27 @@ window.addEventListener("DOMContentLoaded", function () {
   };
   revealOnScroll();
   window.addEventListener("scroll", revealOnScroll);
+
+  // Modal image viewer for product images
+  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+  const modalImg = document.getElementById("modalImage");
+  document.querySelectorAll(".product-img-view").forEach((img) => {
+    img.style.cursor = "zoom-in";
+    const container = img.closest(".card-img-container");
+    if (container) {
+      container.addEventListener("mouseenter", function () {
+        const eye = container.querySelector(".product-img-eye");
+        if (eye) eye.style.opacity = 1;
+      });
+      container.addEventListener("mouseleave", function () {
+        const eye = container.querySelector(".product-img-eye");
+        if (eye) eye.style.opacity = 0;
+      });
+    }
+    img.addEventListener("click", function () {
+      modalImg.src = this.getAttribute("data-src");
+      modalImg.alt = this.alt;
+      modal.show();
+    });
+  });
 });
