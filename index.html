@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuiceTrue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .fade-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .page-fade {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .page-fade.loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="page-fade">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">JuiceTrue</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="#varian">Varian</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pemesanan">Pemesanan</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center justify-content-center fade-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="fw-bold">Only our juice stays true.</h1>
+            <p>Nikmati rasa alami yang sesungguhnya dari jus botolan racikan kami.</p>
+            <a href="#varian" class="btn btn-primary">Lihat Varian</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-5 bg-light fade-section">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Tentang JuiceTrue</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p>JuiceTrue adalah jus buah asli yang dibuat dari 100% buah segar, tanpa pemanis buatan, tanpa pengawet, dan tanpa tambahan air.</p>
+            <p>Semua jus kami disajikan dalam botol praktis, jadi kamu bisa menikmati kesegaran buah kapan saja, di mana saja.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Variant and Price Section -->
+    <section id="varian" class="py-5 fade-section" style="background-color: var(--primary-color); color: var(--secondary-color)">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title" style="color: var(--secondary-color)">Varian Rasa & Harga</h2>
+
+        <!-- Juices - 7k IDR -->
+        <div class="category-section mb-5">
+          <h3 class="category-title mb-4 section-title" style="color: var(--secondary-color); border-bottom-color: var(--secondary-color)">Rp 7.000</h3>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/mangga.jpg" class="card-img-top" alt="Mangga" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Mangga</h5>
+                  <p class="price mb-2">Rp 7.000</p>
+                  <p class="card-text">Manis alami, segar, dan harum khas mangga.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/nanas.jpg" class="card-img-top" alt="Nanas mix buah beet" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Nanax mix buah beet</h5>
+                  <p class="price mb-2">Rp 7.000</p>
+                  <p class="card-text">Segar nanas dengan sentuhan manis beet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 mt-0">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/kacang-hijau.jpg" class="card-img-top" alt="Sari Kacang Hijau" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Sari Kacang Hijau</h5>
+                  <p class="price mb-2">Rp 7.000</p>
+                  <p class="card-text">Minuman sehat dari kacang hijau pilihan dengan cita rasa tradisional.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/strawberry.jpg" class="card-img-top" alt="Strawberry" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Strawberry</h5>
+                  <p class="price mb-2">Rp 7.000</p>
+                  <p class="card-text">Jus strawberry segar dengan rasa manis alami dari buah pilihan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juices - 5k IDR -->
+        <div class="category-section">
+          <h3 class="category-title mb-4 section-title" style="color: var(--secondary-color); border-bottom-color: var(--secondary-color)">Rp 5.000</h3>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/jambu-less.jpg" class="card-img-top" alt="Jambu" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Jambu (Bebas Gula)</h5>
+                  <p class="price mb-2">Rp 5.000</p>
+                  <p class="card-text">Jus jambu segar tanpa tambahan gula untuk rasa yang lebih alami.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/jambu.jpg" class="card-img-top" alt="Jambu" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Jambu</h5>
+                  <p class="price mb-2">Rp 5.000</p>
+                  <p class="card-text">Jus jambu segar dengan rasa manis alami dari buah pilihan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 mt-0">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/nanas-biasa.jpeg" class="card-img-top" alt="Nanas" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Nanas</h5>
+                  <p class="price mb-2">Rp 5.000</p>
+                  <p class="card-text">Jus nanas segar dengan kombinasi rasa manis dan asam yang sempurna.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <img src="assets/img/kedondong.jpeg" class="card-img-top" alt="Kedondong mix Kiamboy" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold" style="color: var(--primary-color)">Kedondong mix Kiamboy</h5>
+                  <p class="price mb-2">Rp 5.000</p>
+                  <p class="card-text">Perpaduan unik kedondong dan kiamboy yang segar dan menyegarkan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section id="payment" class="py-5 bg-light fade-section">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Payment Methods</h2>
+        <!-- Carousel for desktop/tablet -->
+        <div id="paymentCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/blu.png" alt="BCA Digital" class="img-fluid" /></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/seabank.jpg" alt="SeaBank" class="img-fluid" /></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/dana.png" alt="Dana" class="img-fluid" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/spay.png" alt="ShopeePay" class="img-fluid" /></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/gopay.jpg" alt="Gopay" class="img-fluid" /></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="payment-method"><img src="assets/img/cash.jpg" alt="Cash" class="img-fluid" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#paymentCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#paymentCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- Grid for mobile -->
+        <div class="row row-cols-1 g-3 d-block d-md-none mt-3 justify-content-center text-center">
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/blu.png" alt="BCA Digital" class="img-fluid" /></div>
+          </div>
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/seabank.jpg" alt="SeaBank" class="img-fluid" /></div>
+          </div>
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/dana.png" alt="Dana" class="img-fluid" /></div>
+          </div>
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/spay.png" alt="ShopeePay" class="img-fluid" /></div>
+          </div>
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/gopay.jpg" alt="Gopay" class="img-fluid" /></div>
+          </div>
+          <div class="col">
+            <div class="payment-method"><img src="assets/img/cash.jpg" alt="Cash" class="img-fluid" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pemesanan Section -->
+    <section id="pemesanan" class="py-5 fade-section" style="background-color: var(--primary-color); color: var(--secondary-color)">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title" style="color: var(--secondary-color)">Pemesanan</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="mb-4">Tertarik dengan produk kami? Silakan hubungi kami melalui WhatsApp atau Instagram untuk pemesanan dan informasi lebih lanjut.</p>
+            <div class="social-links d-flex justify-content-center">
+              <a href="https://wa.me/6285710664328" class="btn btn-outline-primary">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+      <div class="container">
+        <p>&copy; 2025 JuiceTrue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
